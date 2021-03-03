@@ -33,4 +33,18 @@ public class UserRegistrationTest {
         boolean result = user.LastName("chouhan");
         Assert.assertFalse(result);
     }
+
+    @Test
+    public void give_Email_True_Test() {
+        UserRegistration user = new UserRegistration();
+        boolean result = user.Email("chouhansurendra88@gmail.com");
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void give_Email_False_Test() {
+        UserRegistration user = new UserRegistration();
+        boolean result = user.Email("abc..2002@gmail.com");
+        Assert.assertFalse(result);
+    }
 }
