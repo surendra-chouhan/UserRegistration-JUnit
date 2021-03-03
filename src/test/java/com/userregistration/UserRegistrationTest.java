@@ -59,4 +59,16 @@ public class UserRegistrationTest {
         boolean result = user.MobileNumber("9987451480");
         Assert.assertFalse(result);
     }
+
+    @Test
+    public void give_Password_True_Test() {
+        boolean result = user.Password("surendra_c123");
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void name() {
+        boolean result = user.Password("su-123");
+        Assert.assertFalse(result);
+    }
 }
