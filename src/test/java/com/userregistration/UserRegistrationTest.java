@@ -62,13 +62,13 @@ public class UserRegistrationTest {
 
     @Test
     public void give_Password_True_Test() {
-        boolean result = user.Password("Surendra_c123");
+        boolean result = user.Password("Surendra@123");
         Assert.assertTrue(result);
     }
 
     @Test
     public void name() {
-        boolean result = user.Password("surendra123");
+        boolean result = user.Password("Surendra123");
         Assert.assertFalse(result);
     }
 }
