@@ -68,7 +68,7 @@ public class UserRegistrationTest {
 
     @Test
     public void name() {
-        boolean result = user.Password("surendra-123");
+        boolean result = user.Password("surendra123");
         Assert.assertFalse(result);
     }
 }
