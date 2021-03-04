@@ -30,6 +30,10 @@ public class ParameterizedTestforValidEmails {
 
     @Test
     public void givenEmail_CheckFalse(){
-        user.checkEmail(email);
+        try{
+            user.checkEmail(email);
+        } catch (Exception e) {
+            Assert.assertEquals("Invalid Email ID", e.getMessage());
+        }
     }
 }
