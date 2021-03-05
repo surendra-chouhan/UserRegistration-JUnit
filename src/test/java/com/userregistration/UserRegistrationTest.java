@@ -12,13 +12,25 @@ public class UserRegistrationTest {
     }
 
     @Test
+    public void give_FirstName_True_Test() throws UserRegistrationException {
+        boolean result = user.FirstName("Surendra");
+        Assert.assertTrue(result);
+    }
+
+    @Test
     public void give_FirstName_False_Test() {
         try{
-            user.FirstName("Surendra");
+            user.FirstName("surendra");
         }
         catch (UserRegistrationException e){
             System.out.println(e.getMessage());
         }
+    }
+
+    @Test
+    public void give_LastName_True_Test() throws UserRegistrationException {
+        boolean result = user.LastName("Chouhan");
+        Assert.assertTrue(result);
     }
 
     @Test
@@ -32,6 +44,12 @@ public class UserRegistrationTest {
     }
 
     @Test
+    public void give_Email_True_Test() throws UserRegistrationException {
+        boolean result = user.Email("chouhansurendra88@gmail.com");
+        Assert.assertTrue(result);
+    }
+
+    @Test
     public void give_Email_False_Test() {
         try{
             user.Email("Sure.@.com");
@@ -39,6 +57,12 @@ public class UserRegistrationTest {
         catch (UserRegistrationException e){
             System.out.println(e.getMessage());
         }
+    }
+
+    @Test
+    public void give_MobileNumber_True_Test() throws UserRegistrationException {
+        boolean result = user.MobileNumber("91 9987451480");
+        Assert.assertTrue(result);
     }
 
     @Test
@@ -52,9 +76,15 @@ public class UserRegistrationTest {
     }
 
     @Test
+    public void give_Password_True_Test() throws UserRegistrationException {
+        boolean result = user.Password("Surendra@123");
+        Assert.assertTrue(result);
+    }
+
+    @Test
     public void give_Password_False_Test() {
         try{
-            user.Password("Sure");
+            user.Password("sure@123");
         }
         catch (UserRegistrationException e){
             System.out.println(e.getMessage());
